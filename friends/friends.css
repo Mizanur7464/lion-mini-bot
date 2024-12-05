@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Friends Page Content */
+.friends-container {
+    width: 400px;
+    height: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(27, 24, 24, 0.7);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fixed Header Section */
+.header-section {
+    position: sticky;
+    top: 0;
+    background: rgb(94, 92, 92);
+    padding-bottom: 10px;
+    z-index: 1;
+}
+
+/* Scrollable Leaderboard Section */
+.leaderboard-list {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Scrollbar only for leaderboard list */
+.leaderboard-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.leaderboard-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.leaderboard-list::-webkit-scrollbar-thumb {
+    background: rgba(218, 165, 32, 0.3);
+    border-radius: 5px;
+}
+
+/* Back Button */
+.back-btn-container {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+h1 {
+    text-align: center;
+    color: goldenrod;
+    margin: 0;
+    padding: 10px 0 5px;
+}
+
+/* Stats Section */
+.stats-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.stat-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.stat-box h3 {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.stat-box span {
+    display: block;
+    font-size: 20px;
+    color: goldenrod;
+    margin-top: 5px;
+}
+
+.rank {
+    font-weight: bold;
+    color: #ff4444 !important;
+}
+
+/* Invite Section */
+.invite-section {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.invite-btn {
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto;
+}
+
+.invite-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.invite-btn:hover {
+    background: #ff6666;
+}
+
+.bonus-text {
+    color: #ffffff;
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+/* Leaderboard */
+.leaderboard-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.tab-btn {
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    background: goldenrod;
+}
+
+/* Player Cards */
+.player-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-player {
+    background: rgba(218, 165, 32, 0.1);
+    border: 1px solid rgba(218, 165, 32, 0.3);
+}
+
+.rank-badge {
+    font-size: 24px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.rank-number {
+    color: #ffffff;
+    font-size: 18px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.player-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.player-info {
+    flex-grow: 1;
+}
+
+.player-info h3 {
+    margin: 0;
+    font-size: 14px;
+    color: goldenrod;
+}
+
+.player-info p {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: #fffefe;
+}
+
+.follow-btn {
+    padding: 6px 15px;
+    background: transparent;
+    border: 1px solid goldenrod;
+    border-radius: 20px;
+    color: goldenrod;
+    cursor: pointer;
+}
+
+.follow-btn:hover {
+    background: goldenrod;
+    color: white;
+}

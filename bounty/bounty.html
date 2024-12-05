@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earn More Coins</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="bounty.css">
+</head>
+<body>
+    <div class="bounty-container">
+        <!-- Fixed Header Section -->
+        <div class="header-section">
+            <h1>EARN MORE COINS</h1>
+
+            <!-- Daily Tutorial -->
+            <div class="section">
+                <a href="#" class="task-card daily-video">
+                    <div class="task-info">
+                        <img src="img/video.png" alt="Video">
+                        <div class="task-details">
+                            <h3>Daily Tutorial</h3>
+                            <p>Watch and earn 1000 coins</p>
+                        </div>
+                    </div>
+                    <div class="arrow">→</div>
+                </a>
+            </div>
+
+            <!-- Daily Tasks Section -->
+            <div class="section">
+                <button onclick="showDailyRewards()" class="daily-reward">
+                    <div class="task-info">
+                        <img src="img/calendar.png" alt="Calendar">
+                        <div class="task-details">
+                            <h3>Daily Reward</h3>
+                            <p>Claim your daily bonus</p>
+                        </div>
+                    </div>
+                    <div class="arrow">→</div>
+                </button>
+            </div>
+
+            <h2>All Tasks</h2>
+        </div>
+
+        <!-- Scrollable Tasks Section -->
+        <div class="tasks-list">
+            <!-- All Tasks Section -->
+            <div class="social-links">
+                <a href="https://discord.gg/yourserver" class="task-card" data-task="discord" onclick="completeTask(event, this)">
+                    <div class="task-info">
+                        <img src="img/discord.png" alt="Discord">
+                        <div class="task-details">
+                            <h3>Join Our Discord</h3>
+                            <p>+2000 coins</p>
+                        </div>
+                    </div>
+                    <div class="task-status">
+                        <span class="arrow">→</span>
+                        <span class="checkmark hidden">✓</span>
+                    </div>
+                </a>
+
+                <a href="https://twitter.com/yourprofile" class="task-card" data-task="twitter" onclick="completeTask(event, this)">
+                    <div class="task-info">
+                        <img src="img/twitter.png" alt="Twitter">
+                        <div class="task-details">
+                            <h3>Follow on Twitter</h3>
+                            <p>+1500 coins</p>
+                        </div>
+                    </div>
+                    <div class="task-status">
+                        <span class="arrow">→</span>
+                        <span class="checkmark hidden">✓</span>
+                    </div>
+                </a>
+
+                <a href="https://facebook.com/yourpage" class="task-card">
+                    <div class="task-info">
+                        <img src="img/facebook.png" alt="Facebook">
+                        <div class="task-details">
+                            <h3>Like Facebook Page</h3>
+                            <p>+1500 coins</p>
+                        </div>
+                    </div>
+                    <div class="arrow">→</div>
+                </a>
+
+                <a href="https://instagram.com/yourprofile" class="task-card">
+                    <div class="task-info">
+                        <img src="img/instagram.png" alt="Instagram">
+                        <div class="task-details">
+                            <h3>Follow on Instagram</h3>
+                            <p>+1500 coins</p>
+                        </div>
+                    </div>
+                    <div class="arrow">→</div>
+                </a>
+
+                <a href="https://t.me/yourgroup" class="task-card">
+                    <div class="task-info">
+                        <img src="img/telegram.png" alt="Telegram">
+                        <div class="task-details">
+                            <h3>Join Telegram Group</h3>
+                            <p>+2000 coins</p>
+                        </div>
+                    </div>
+                    <div class="arrow">→</div>
+                </a>
+
+                <a href="#" class="task-card" onclick="showNewsletterPopup(event)">
+                    <div class="task-info">
+                        <img src="img/newsletter.png" alt="Newsletter">
+                        <div class="task-details">
+                            <h3>Sign Up for Newsletter</h3>
+                            <p>+1000 coins</p>
+                        </div>
+                    </div>
+                    <div class="arrow">→</div>
+                </a>
+
+                <a href="https://appstore.com/yourapp" class="task-card">
+                    <div class="task-info">
+                        <img src="img/review.png" alt="Review">
+                        <div class="task-details">
+                            <h3>Review on App Store</h3>
+                            <p>+5000 coins</p>
+                        </div>
+                    </div>
+                    <div class="arrow">→</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Menu -->
+        <div class="footer-menu">
+            <div>
+                <a href="../index.html"><img src="../img/exploration.png" alt="Explore"></a>
+                <p><a href="../index.html">Explore</a></p>
+            </div>
+            <div>
+                <a href="../mission/mission.html"><img src="../img/mission-statement.png" alt="Missions"></a>
+                <p><a href="../mission/mission.html">Missions</a></p>
+            </div>
+            <div>
+                <a href="../friends/friends.html"><img src="../img/friends.png" alt="Friends"></a>
+                <p><a href="../friends/friends.html">Friends</a></p>
+            </div>
+            <div>
+                <a href="bounty.html"><img src="reward.png" alt="Bounty"></a>
+                <p><a href="bounty.html">Bounty</a></p>
+            </div>
+            <div>
+                <a href="../wallet/wallet.html"><img src="../wallet/img/binacn-removebg-preview.png" alt="Wallet"></a>
+                <p><a href="../wallet/wallet.html">Wallet</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Daily Rewards Modal -->
+    <div id="dailyRewardsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeDailyRewards()">&times;</span>
+            <h2>Daily Rewards</h2>
+            <div class="rewards-grid">
+                <!-- Days will be added by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="bounty.js"></script>
+</body>
+</html> 

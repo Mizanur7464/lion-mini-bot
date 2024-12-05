@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Profile Section -->
+    <div class="profile-section">
+      <img src="img/lion.png" alt="Profile">
+      <strong id="username">Loading...</strong>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat-box">
+        Earn per tap
+        <span>+15</span>
+      </div>
+      <div class="stat-box">
+        Coins to level up
+        <span>1M</span>
+      </div>
+      <div class="stat-box">
+        Profit per hour
+        <span>+600</span>
+      </div>
+    </div>
+
+    <!-- Current Coins -->
+    <div class="coin-count" id="coin-count">500</div>
+
+    <div class="container-two">
+        <p class="one">Boss</p>
+        <p class="two">Level 5/5</p>
+      </div>
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      
+
+      <div id="progress"></div>
+    </div>
+   
+
+
+    <!-- Lion Icon -->
+    <div class="lion-icon" id="lion-icon"></div>
+    <!-- Boost Section -->
+    <div class="boost">
+        <div class="click-counter">
+            <span id="current-clicks">8000</span> / <span>8000</span>
+        </div>
+        <a href="#" class="boost-btn">
+            <span><img class="rocket" src="img/rocket.png" alt=""></span>BOOST
+        </a>
+    </div>
+    <!-- Coins Display -->
+<div class="coin-display" id="coin-display">+100</div>
+
+
+
+
+
+    <!-- Footer Menu -->
+    <div class="footer-menu">
+      <div>
+        <a href="index.html"><img src="img/exploration.png" alt="Explore"></a>
+        <p><a style="color: goldenrod; text-decoration: none;" href="index.html">Explore</a></p>
+      </div>
+      <div>
+        <a href="mission/mission.html"><img src="img/mission-statement.png" alt="Missions"></a>
+        <p><a style="color: goldenrod; text-decoration: none;" href="mission/mission.html">Missions</a></p>
+      </div>
+      <div>
+        <a href="friends/friends.html"><img src="img/friends.png" alt="Friends"></a>
+        <p><a style="color: goldenrod;text-decoration: none;" href="friends/friends.html">Friends</a></p>
+      </div>
+      <div>
+        <a href="bounty/bounty.html"><img src="img/reward.png" alt="Bounty"></a>
+        <p><a style="color: goldenrod; text-decoration: none;" href="bounty/bounty.html">Bounty</a></p>
+      </div>
+      <div>
+        <a href="wallet/wallet.html"><img src="wallet/img/binacn-removebg-preview.png" alt="Wallet"></a>
+        <p>Wallet</p>
+      </div>
+    </div>
+
+    <!-- Boost Button -->
+  </div>
+  <script src="apps.js"></script>
+  <script>
+    // Initialize Telegram WebApp
+    const tg = window.Telegram.WebApp;
+    
+    // Expand to full screen
+    tg.expand();
+    
+    // Get user data
+    const user = tg.initDataUnsafe?.user;
+    if (user) {
+        document.getElementById('username').textContent = user.username || user.first_name || 'Player';
+    }
+  </script>
+</body>
+</html>

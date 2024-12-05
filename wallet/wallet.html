@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="wallet.css">
+</head>
+<body>
+  <div class="wallet-container">
+    <!-- Fixed Header Section -->
+    <div class="header-section">
+      <h1>Connect Wallet</h1>
+      <img src="img/binacn-removebg-preview.png" alt="Wallet Logo" class="wallet-logo">
+    </div>
+
+    <!-- Scrollable Content Section -->
+    <div class="wallet-content">
+      <button class="connect-button" onclick="showWalletPopup()">
+        Connect Wallet
+      </button>
+    </div>
+
+    <!-- Footer Menu -->
+    <div class="footer-menu">
+      <div>
+        <a href="../index.html"><img src="../img/exploration.png" alt="Explore"></a>
+        <p><a href="../index.html">Explore</a></p>
+      </div>
+      <div>
+        <a href="../mission/mission.html"><img src="../img/mission-statement.png" alt="Missions"></a>
+        <p><a href="../mission/mission.html">Missions</a></p>
+      </div>
+      <div>
+        <a href="../friends/friends.html"><img src="../img/friends.png" alt="Friends"></a>
+        <p><a href="../friends/friends.html">Friends</a></p>
+      </div>
+      <div>
+        <a href="../bounty/bounty.html"><img src="../img/reward.png" alt="Bounty"></a>
+        <p><a href="../bounty/bounty.html">Bounty</a></p>
+      </div>
+      <div>
+        <a href="wallet.html"><img src="img/binacn-removebg-preview.png" alt="Wallet"></a>
+        <p><a href="wallet.html">Wallet</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wallet Popup -->
+  <div class="wallet-popup" id="walletPopup">
+    <div class="popup-content">
+      <button class="close-btn" onclick="closePopup()">✕</button>
+      <img src="img/binacn-removebg-preview.png" alt="Wallet Icon" class="wallet-icon">
+      <h2>Connect your wallet</h2>
+      <p>Connect your BSC wallet</p>
+      <button class="popup-connect-btn" onclick="window.location.href='connect.html'">
+        Connect your wallet
+      </button>
+    </div>
+  </div>
+
+  <script src="wallet.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+/* Common Styles for All Pages */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Common Container Style */
+.container, 
+.friends-container,
+.bounty-container,
+.wallet-container,
+.mission-container {
+    width: 400px;
+    height: 520px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(27, 24, 24, 0.7);
+    border-radius: 10px;
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Common Scrollbar Style */
+.container::-webkit-scrollbar,
+.friends-container::-webkit-scrollbar,
+.bounty-container::-webkit-scrollbar,
+.wallet-container::-webkit-scrollbar,
+.mission-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.container::-webkit-scrollbar-track,
+.friends-container::-webkit-scrollbar-track,
+.bounty-container::-webkit-scrollbar-track,
+.wallet-container::-webkit-scrollbar-track,
+.mission-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.container::-webkit-scrollbar-thumb,
+.friends-container::-webkit-scrollbar-thumb,
+.bounty-container::-webkit-scrollbar-thumb,
+.wallet-container::-webkit-scrollbar-thumb,
+.mission-container::-webkit-scrollbar-thumb {
+    background: rgba(218, 165, 32, 0.3);
+    border-radius: 5px;
+}
+
+/* Common Back Button Style */
+.back-btn-container {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: goldenrod;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #daa520;
+}
+
+/* Common Headings Style */
+h1, h2 {
+    text-align: center;
+    color: goldenrod;
+    margin-bottom: 20px;
+}
+
+/* Common Card Style */
+.card,
+.task-card,
+.player-card,
+.mission-card,
+.wallet-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* Common Button Style */
+.btn,
+.back-btn,
+.claim-btn,
+.follow-btn,
+.invite-btn {
+    border-radius: 5px;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #daa520;
+}
+
+/* Common Text Colors */
+.text-gold {
+    color: goldenrod;
+}
+
+.text-gray {
+    color: #888;
+}
+
+/* Common Section Style */
+.section {
+    margin-bottom: 30px;
+}
+
+/* Modal Style */
+.modal-content {
+    border-radius: 10px;
+}
+
+/* Stats Box Style */
+.stat-box {
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container,
+    .friends-container,
+    .bounty-container,
+    .wallet-container,
+    .mission-container {
+        margin: 0;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+/* Navigation Menu Style */
+.footer-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #000;
+    margin-top: 0;
+    border-radius: 0 0 10px 10px;
+    border-top: 1px solid rgba(218, 165, 32, 0.3);
+}
+
+.footer-menu div {
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.footer-menu img {
+    width: 40px;
+}
+
+.footer-menu a {
+    color: goldenrod;
+    text-decoration: none;
+}
+ 

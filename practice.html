@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet Navigation</title>
+  <link rel="stylesheet" href="practice.css">
+</head>
+<body>
+  <!-- Page 1: Wallet Connect -->
+  <div class="page" id="page1">
+    <div class="modal-content">
+      <h2>Connect Wallet</h2>
+      <button onclick="navigateTo('page2')">Proceed to Wallet Options</button>
+    </div>
+  </div>
+
+  <!-- Page 2: Wallet Options -->
+  <div class="page" id="page2" style="display: none;">
+    <div class="modal-content">
+      <h2>Choose a Wallet</h2>
+      <button class="wallet-btn" onclick="connectWallet('WalletConnect')">WalletConnect</button>
+      <button class="wallet-btn" onclick="connectWallet('Coinbase')">Coinbase</button>
+      <button class="wallet-btn" onclick="connectWallet('MetaMask')">MetaMask</button>
+      <button onclick="goBack()">Back</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

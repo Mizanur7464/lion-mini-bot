@@ -1,0 +1,135 @@
+/* Mission Container styles */
+body {
+    overflow: hidden;
+}
+.mission-container {
+    width: 400px;
+    height: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(27, 24, 24, 0.7);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fixed Header Section */
+.header-section {
+    position: sticky;
+    top: 0;
+    background: rgb(94, 92, 92);
+    padding-bottom: 20px;
+    z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    color: goldenrod;
+    margin: 0;
+    padding: 10px 0;
+}
+
+/* Scrollable Mission List */
+.mission-list {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Scrollbar only for mission list */
+.mission-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.mission-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.mission-list::-webkit-scrollbar-thumb {
+    background: rgba(218, 165, 32, 0.3);
+    border-radius: 5px;
+}
+
+/* Mission Cards */
+.mission-card {
+    background: rgba(27, 22, 22, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mission-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mission-info img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.mission-details h3 {
+    margin: 0;
+    font-size: 16px;
+    color: goldenrod;
+}
+
+.reward {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #888;
+}
+
+/* Mini Progress Bar */
+.progress-mini {
+    margin-top: 5px;
+}
+
+.progress-bar-mini {
+    background: #333;
+    height: 5px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 5px;
+    width: 150px;
+}
+
+.progress-bar-mini .progress {
+    background: goldenrod;
+}
+
+/* Claim Button */
+.claim-btn {
+    padding: 8px 20px;
+    background: goldenrod;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.claim-btn:disabled {
+    background: #444;
+    cursor: not-allowed;
+}
+
+.claim-btn:not(:disabled):hover {
+    background: #daa520;
+}
+
+/* Completed Mission Style */
+.mission-card.completed {
+    border: 1px solid #2ecc71;
+}
+
+.mission-card.completed .claim-btn {
+    background: #2ecc71;
+    cursor: default;
+} 

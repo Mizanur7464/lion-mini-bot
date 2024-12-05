@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet Connect</title>
+  <link rel="stylesheet" href="connect.css">
+  <script src="https://unpkg.com/@coinbase/wallet-sdk@3.0.0/dist/index.umd.js"></script>
+  <script src="https://unpkg.com/@walletconnect/web3-provider@1.7.1/dist/umd/index.min.js"></script>
+  <style>
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: goldenrod;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .close-btn:hover {
+      color: #daa520;
+    }
+  </style>
+</head>
+<body>
+  <!-- Wallet Connection Modal -->
+  <div class="wallet-modal" id="walletModal" style="display: flex;">
+    <div class="modal-content">
+      <!-- Removed back button and added close button -->
+      <button class="close-btn" onclick="window.location.href='wallet.html'">✕</button>
+
+      <h2>Connect Wallet</h2>
+
+      <!-- Email Input -->
+      <div class="input-group">
+        <form id="emailForm" onsubmit="handleEmailSubmit(event)">
+          <input type="email" id="emailInput" placeholder="Email" required>
+          <button type="submit" class="submit-btn">Enter</button>
+        </form>
+      </div>
+      <p class="separator">or</p>
+
+      <!-- Wallet Options -->
+      <div class="wallet-options">
+        <button class="wallet-btn" onclick="connectWallet('metamask')">
+          <img src="img/meta.png" alt="MetaMask">
+          MetaMask
+        </button>
+
+        <button class="wallet-btn" onclick="connectWallet('walletconnect')">
+          <img src="img/connect.png" alt="WalletConnect">
+          WalletConnect
+        </button>
+
+        <button class="wallet-btn" onclick="connectWallet('trustwallet')">
+          <img src="img/trust.jpg" alt="Trust Wallet">
+          Trust Wallet
+        </button>
+
+        <button class="wallet-btn" onclick="connectWallet('binance')">
+          <img src="img/binacn-removebg-preview.png" alt="Binance Wallet">
+          Binance Wallet
+        </button>
+
+        <button class="wallet-btn" onclick="connectWallet('coinbase')">
+          <img src="img/coinbase.png" alt="Coinbase Wallet">
+          Coinbase Wallet
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Your existing scripts... -->
+  <script src="connect.js"></script>
+</body>
+</html>

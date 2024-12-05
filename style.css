@@ -1,0 +1,257 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;  /* স্ক্রলবার লুকাবে */
+  background: url('https://i.imgur.com/9Jmzwz2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: goldenrod;
+  font-weight: bolder;
+  height: 100vh; /* পুরো ভিউপোর্টের উচ্চতা */
+  width: 100vw; /* পুরো ভিউপোর্টের প্রস্থ */
+}
+
+
+  .container {
+    width: 400px;
+    height: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(27, 24, 24, 0.7);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .profile-section {
+    display: flex;
+    align-items: center;
+
+  }
+
+  .profile-section img {
+    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  .profile-section strong {
+    font-size: 16px;
+    color: #fff; /* প্রয়োজন অনুযায়ী রঙ নির্ধারণ করুন */
+   }
+
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+
+  .stat-box {
+    width: 30%;
+    background: rgb(37, 36, 36);
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 10px;
+  }
+
+  .stat-box span {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .coin-count {
+    font-size: 26px;
+    margin: 10px 0;
+  }
+  .container-two{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: .1px;
+
+  }
+  .one{
+    margin: 0;
+    font-weight: bolder;
+    font-size: 16px;
+  }
+  .two{
+    font-weight: bolder;
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .progress-bar {
+    background: #444;
+    border-radius: 5px;
+    height: 15px;
+    margin: 5px 0;
+    position: relative;
+    border-radius: 10px;  
+
+
+  }
+
+
+  .progress-bar div {
+    background: #f90;
+    height: 100%;
+    width: 50%; /* Boss health percentage */
+    
+}
+
+
+  .progress-bar {
+    text-align: right;
+  }
+
+  .lion-icon {
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+    background: url('img/lion.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 60px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  .lion-icon.zoom {
+    transform: scale(1.2);
+  }
+
+  .footer-menu {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #000;
+    margin-top: 75px;
+  }
+
+  .footer-menu div {
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .footer-menu img {
+    width: 40px;
+
+  }
+  .boost{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .boost-btn {
+    background: #f90;
+    color: #000;
+    padding: 5px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .boost-btn:hover {
+    background: #ffb700;
+  }
+
+  .rocket {
+    width: 10px;
+    height: 10px;
+    padding-right: 5px;
+  }
+
+  .click-counter {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: goldenrod;
+    font-weight: bold;
+  }
+
+  /* Coin display animation */
+  .coin-display {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(0);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .coin-display.show {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+
+  /* Animations */
+  @keyframes shine {
+    0% { left: -50%; }
+    100% { left: 100%; }
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+  }
+
+  /* Boost Active Animation */
+  .boost-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 99;
+  }
+
+  .boost-particles {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #ff4444;
+    border-radius: 50%;
+    animation: particle 1s linear infinite;
+  }
+
+  @keyframes particle {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(0);
+        opacity: 0;
+    }
+  }
+
+  /* Boost Message */
+  .boost-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 68, 68, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    animation: fadeInOut 3s ease-in-out;
+    z-index: 1000;
+  }
+
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translate(-50%, -20px); }
+    20% { opacity: 1; transform: translate(-50%, 0); }
+    80% { opacity: 1; transform: translate(-50%, 0); }
+    100% { opacity: 0; transform: translate(-50%, -20px); }
+  }

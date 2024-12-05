@@ -1,0 +1,293 @@
+/* Bounty page styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bounty-container {
+    width: 400px;
+    height: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(27, 24, 24, 0.7);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fixed Header Section */
+.header-section {
+    position: sticky;
+    top: 0;
+    background: rgb(94, 92, 92);
+    padding-bottom: 5px;
+    z-index: 1;
+}
+
+/* Scrollable Tasks Section */
+.tasks-list {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Scrollbar only for tasks list */
+.tasks-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.tasks-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tasks-list::-webkit-scrollbar-thumb {
+    background: rgba(218, 165, 32, 0.3);
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: goldenrod;
+    margin: 0;
+    padding: 10px 0 5px;
+}
+
+/* Task Cards */
+.task-card {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.task-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.task-info img {
+    width: 35px;
+    height: 35px;
+}
+
+.task-details h3 {
+    margin: 0;
+    color: goldenrod;
+    font-size: 14px;
+}
+
+.task-details p {
+    margin: 2px 0 0;
+    color: #888;
+    font-size: 12px;
+}
+
+.arrow {
+    color: goldenrod;
+    font-size: 20px;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: goldenrod;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Daily Video Style */
+.daily-video {
+    border: 1px solid #ff4444;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 400px;
+    max-height: 600px;
+    margin: auto;
+    background: rgba(27, 24, 24, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: goldenrod;
+    cursor: pointer;
+}
+
+/* Rewards Grid */
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.day-reward {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid rgba(218, 165, 32, 0.3);
+}
+
+.day-reward.completed {
+    border-color: #2ecc71;
+}
+
+.day-reward.active {
+    border-color: goldenrod;
+}
+
+.day-reward .claim-btn {
+    margin-top: 10px;
+    padding: 8px 20px;
+    background: goldenrod;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.day-reward .claim-btn:hover {
+    background: #daa520;
+}
+
+/* Task Status */
+.task-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkmark {
+    color: #2ecc71;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.task-card.completed {
+    border: 1px solid #2ecc71;
+}
+
+.task-card.completed .arrow {
+    display: none;
+}
+
+.task-card.completed .checkmark {
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .bounty-container {
+        margin: 0;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .task-info img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .task-details h3 {
+        font-size: 14px;
+    }
+
+    .task-details p {
+        font-size: 12px;
+    }
+}
+
+/* Daily Task Button Style */
+.daily-reward {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.daily-reward .task-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.daily-reward .task-info img {
+    width: 35px;
+    height: 35px;
+}
+
+.daily-reward .task-details h3 {
+    margin: 0;
+    color: goldenrod;
+    font-size: 14px;
+}
+
+.daily-reward .task-details p {
+    margin: 2px 0 0;
+    color: #888;
+    font-size: 12px;
+}
+
+.daily-reward .arrow {
+    color: goldenrod;
+    font-size: 20px;
+}
+
+.daily-reward:hover {
+    background: rgba(0, 0, 0, 0.4);
+} 

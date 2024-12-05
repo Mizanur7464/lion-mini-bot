@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends & Leaderboard</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="friends.css">
+</head>
+<body>
+    <div class="friends-container">
+        <!-- Fixed Header Section -->
+        <div class="header-section">
+            <h1>Friends & Leaderboard</h1>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="stat-box">
+                    <h3>Your Rank</h3>
+                    <span class="rank">#128</span>
+                </div>
+                <div class="stat-box">
+                    <h3>Friends</h3>
+                    <span>24</span>
+                </div>
+                <div class="stat-box">
+                    <h3>Team Bonus</h3>
+                    <span>+15%</span>
+                </div>
+            </div>
+
+            <!-- Invite Section -->
+            <div class="invite-section">
+                <button class="invite-btn" onclick="shareInvite()">
+                    <img src="img/invite.png" alt="Invite">
+                    Invite Friends
+                </button>
+                <p class="bonus-text">Invite friends and get 1000 coins bonus!</p>
+            </div>
+
+            <!-- Leaderboard Tabs -->
+            <div class="leaderboard-tabs">
+                <button class="tab-btn active" onclick="switchTab('global')">Global</button>
+                <button class="tab-btn" onclick="switchTab('friends')">Friends</button>
+            </div>
+        </div>
+
+        <!-- Scrollable Leaderboard List -->
+        <div class="leaderboard-list">
+            <!-- Player Cards -->
+            <div class="player-card top-player">
+                <div class="rank-badge">👑</div>
+                <img src="img/avatar1.png" alt="Player" class="player-avatar">
+                <div class="player-info">
+                    <h3>CryptoKing</h3>
+                    <p>1.5M coins</p>
+                </div>
+                <button class="follow-btn">Follow</button>
+            </div>
+
+            <!-- More player cards... -->
+        </div>
+
+        <!-- Footer Menu -->
+        <div class="footer-menu">
+            <div>
+                <a href="../index.html"><img src="../img/exploration.png" alt="Explore"></a>
+                <p><a href="../index.html">Explore</a></p>
+            </div>
+            <div>
+                <a href="../mission/mission.html"><img src="../img/mission-statement.png" alt="Missions"></a>
+                <p><a href="../mission/mission.html">Missions</a></p>
+            </div>
+            <div>
+                <a href="friends.html"><img src="friends.png" alt="Friends"></a>
+                <p><a href="friends.html">Friends</a></p>
+            </div>
+            <div>
+                <a href="../bounty/bounty.html"><img src="../img/reward.png" alt="Bounty"></a>
+                <p><a href="../bounty/bounty.html">Bounty</a></p>
+            </div>
+            <div>
+                <a href="../wallet/wallet.html"><img src="../wallet/img/binacn-removebg-preview.png" alt="Wallet"></a>
+                <p><a href="../wallet/wallet.html">Wallet</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="friends.js"></script>
+</body>
+</html>
