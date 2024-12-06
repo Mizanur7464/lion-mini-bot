@@ -146,8 +146,24 @@ body {
 
 .footer-menu img {
     width: 40px;
-
 }
+
+.footer-menu a {
+    color: goldenrod;
+    text-decoration: none;  /* Remove underline */
+}
+
+.footer-menu p a {
+    color: goldenrod;
+    text-decoration: none;  /* Remove underline */
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.footer-menu p {
+    margin: 5px 0 0 0;
+}
+
 .boost{
     display: flex;
     justify-content: space-between;
