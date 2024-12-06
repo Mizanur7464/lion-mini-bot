@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;  /* স্ক্রলবার লুকাবে */
+  /* স্ক্রলবার লুকাবে */
   background: url('https://i.imgur.com/9Jmzwz2.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: Arial, sans-serif;
@@ -135,7 +135,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     background-color: #000;
-    margin-top: 75px;
+    margin-top: 180px;
 }
 
 .footer-menu div {
